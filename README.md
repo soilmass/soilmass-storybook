@@ -1,126 +1,106 @@
-# Soilmass Storybook
+# Soilmass Design System
 
-Interactive component documentation for the Soilmass Design System.
+A premium React component library with interactive Storybook documentation.
 
 ## Overview
 
-This Storybook showcases 90+ components from the Soilmass Design System, featuring:
+97 production-ready components featuring:
 
 - **Premium Design Tokens**: Colored shadows, spring animations, glass effects
-- **1,000+ Stories**: Comprehensive examples for every component variant
-- **Accessibility Testing**: Built-in a11y validation
-- **Dark Mode Support**: Full dark theme token set
+- **1,000+ Story Variants**: Comprehensive documentation for every component
+- **Dark Mode**: Complete dark theme token set
+- **Accessibility**: Built-in a11y testing
 
-## Categories
-
-| Category | Components | Description |
-|----------|------------|-------------|
-| Atoms | 10 | Button, Input, Badge, Avatar, etc. |
-| Forms | 8 | Slider, Rating, File Upload, Calendar, etc. |
-| Feedback | 9 | Toast, Alert, Progress, Skeleton, etc. |
-| Navigation | 7 | Tabs, Accordion, Breadcrumb, Pagination, etc. |
-| Overlays | 7 | Modal, Drawer, Dropdown, Tooltip, etc. |
-| Data Display | 12 | Table, Timeline, Cards, Code Block, etc. |
-| Marketing | 11 | Hero, CTA, Testimonials, Pricing, etc. |
-| Utils | 22 | Animations, Effects, Theme Toggle, etc. |
-
-## Quick Start
+## Installation
 
 ```bash
-# Install dependencies (from parent directory)
 pnpm install
+```
 
-# Run Storybook
+## Development
+
+```bash
+# Start Storybook
 pnpm storybook
 
 # Build static Storybook
 pnpm build-storybook
 ```
 
+## Components
+
+### Atoms
+Button, Input, Badge, Avatar, Checkbox, Radio, Toggle, Select, Link, Divider
+
+### Forms
+Slider, Rating, File Upload, Calendar, Search Input, Number Input, Tag Input, Contact Form
+
+### Feedback
+Toast, Alert, Progress, Skeleton, Loading States, Empty State, Confetti, Cookie Consent, Notification Badge
+
+### Navigation
+Tabs, Accordion, Breadcrumb, Pagination, Stepper, FAB, Dock
+
+### Overlays
+Modal, Drawer, Dropdown, Tooltip, Popover, Command Palette, Collapsible
+
+### Data Display
+Table, Timeline, Code Block, Kbd, Cards (Pricing, Stat, Team, Blog), Video Player, Image Gallery, Avatar Stack, Bento Grid, Before/After
+
+### Marketing
+Hero Section, CTA Banner, Feature Card, Testimonial Card, Logo Cloud, FAQ, Newsletter Form, Comparison Table, Announcement Bar, Marquee, Social Links
+
+### Effects & Utils
+Particles, Meteors, Glass Effect, Glow Effects, Gradient Text, Text Highlight, Animated Border, Tilt Card, Flip Card, Scroll Animations, Cursor Effects, Magnetic Elements, Theme Toggle, Copy Button, Scroll to Top, Countdown Timer
+
+## Design Tokens
+
+All components use CSS custom properties from `app/globals.css`:
+
+```css
+/* Shadows with brand tints */
+--shadow-primary-sm, --shadow-primary-md, --shadow-primary-lg
+--shadow-accent-sm, --shadow-accent-md
+
+/* Spring animations */
+--ease-spring: cubic-bezier(0.22, 1, 0.36, 1)
+--ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1)
+
+/* Glass effects */
+--glass-bg, --blur-sm, --blur-md, --blur-lg
+
+/* Micro-interactions */
+--scale-press: 0.98
+--scale-hover: 1.02
+```
+
 ## Project Structure
 
 ```
-storybook/
 ├── .storybook/           # Storybook configuration
-│   ├── main.ts           # Stories, addons, Vite config
-│   ├── manager.ts        # UI theme and branding
-│   ├── preview.tsx       # Decorators and parameters
-│   └── vitest.setup.ts   # Test configuration
-└── stories/
-    ├── docs/             # MDX documentation pages
-    │   ├── Introduction.mdx
-    │   └── Colors.mdx
-    └── components/       # Component stories
-        ├── atoms/
-        ├── forms/
-        ├── feedback/
-        ├── navigation/
-        ├── overlays/
-        ├── data-display/
-        ├── marketing/
-        └── utils/
-```
-
-## Design System Features
-
-### Premium Tokens
-
-- **Shadows**: Colored shadows with brand tints (`--shadow-primary-*`, `--shadow-accent-*`)
-- **Gradients**: Brand gradients, mesh backgrounds, hero gradients
-- **Motion**: Spring easing (`--ease-spring`), bounce, snappy transitions
-- **Glass**: Backdrop blur effects (`--glass-bg`, `--blur-*`)
-- **Micro-interactions**: Scale on press, hover lift animations
-
-### Component Patterns
-
-All components follow consistent patterns:
-
-```tsx
-// Spring-based transitions
-className="transition-all duration-[var(--duration-normal)] ease-[var(--ease-spring)]"
-
-// Colored shadows
-className="shadow-[var(--shadow-primary-sm)] hover:shadow-[var(--shadow-primary-md)]"
-
-// Scale micro-interactions
-className="active:scale-[var(--scale-press)]"
-
-// Glass effects
-className="bg-[var(--glass-bg)] backdrop-blur-[var(--blur-lg)]"
+├── app/
+│   └── globals.css       # Design tokens
+├── components/
+│   ├── ui/               # Atomic components
+│   └── patterns/         # Composed patterns
+├── lib/
+│   └── utils.ts          # Utilities (cn, etc.)
+└── stories/              # Component documentation
 ```
 
 ## Tech Stack
 
-- **Storybook** 10.2.7
-- **React** 19
-- **Vite** 7
-- **Tailwind CSS** 4
-- **TypeScript** 5.7
-
-## Scripts
-
-| Command | Description |
-|---------|-------------|
-| `pnpm storybook` | Start dev server on port 6006 |
-| `pnpm build-storybook` | Build static site to `storybook-static/` |
+- React 19
+- Storybook 10.2
+- Tailwind CSS 4
+- TypeScript 5.7
+- Vite 7
 
 ## Deployment
 
-### GitHub Pages
+GitHub Pages auto-deployment is configured. Push to `main` to deploy.
 
-This repository includes a GitHub Actions workflow that automatically deploys to GitHub Pages on push to `main`.
-
-### Manual Deploy
-
-```bash
-pnpm build-storybook
-# Deploy storybook-static/ to your hosting provider
-```
-
-## Related
-
-- [Soilmass Design System Spec](https://github.com/soilmass/design-system-spec)
-- [Soilmass Reference Site](https://github.com/soilmass/reference)
+**Live**: https://soilmass.github.io/soilmass-storybook
 
 ## License
 
