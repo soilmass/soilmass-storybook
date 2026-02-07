@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+storybook-static/
+dist/
+
+# Cache
+.cache/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test coverage
+coverage/

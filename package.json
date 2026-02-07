@@ -1,0 +1,53 @@
+{
+  "name": "soilmass-storybook",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Interactive component documentation for the Soilmass Design System",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soilmass/soilmass-storybook.git"
+  },
+  "homepage": "https://soilmass.github.io/soilmass-storybook",
+  "keywords": [
+    "storybook",
+    "design-system",
+    "react",
+    "components",
+    "ui",
+    "soilmass"
+  ],
+  "author": "Soilmass",
+  "license": "MIT",
+  "scripts": {
+    "storybook": "storybook dev -p 6006 -c .storybook",
+    "build-storybook": "storybook build -c .storybook -o storybook-static"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^5.0.0",
+    "@storybook/addon-a11y": "^10.2.7",
+    "@storybook/addon-docs": "^10.2.7",
+    "@storybook/addon-vitest": "^10.2.7",
+    "@storybook/react": "^10.2.7",
+    "@storybook/react-vite": "^10.2.7",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "postcss": "^8.4.49",
+    "storybook": "^10.2.7",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^7.3.1"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
